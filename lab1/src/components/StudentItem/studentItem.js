@@ -2,9 +2,10 @@ import React from "react";
 
 const studentItem = (props) => {
     return (
-        <tr onClick={props.onClick}>
-            <td>{props.student.firstName}</td>
-            <td>{props.student.lastName}</td>
+        <tr>
+            <td  onClick={props.onClick}>{props.student.firstName}</td>
+            <td  onClick={props.onClick}>{props.student.lastName}</td>
+            <td><button onClick={props.deleteMe}>Delete me</button></td>
         </tr>
     );
 };

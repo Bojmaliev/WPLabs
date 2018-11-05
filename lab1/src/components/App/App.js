@@ -3,7 +3,8 @@ import './App.css';
 import StudentsList from "../StudentsList/studentsList"
 import EditStudentDetails from "../EditStudentDetails/editStudentDetails"
 import {listStudents} from "../../repository/studentRepository"
-
+import AddNewStudent from "../AddNewStudent/addNewStudent"
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
     constructor(props){
@@ -28,13 +29,31 @@ class App extends Component {
         newStudents[event.index] = event.student;
         this.setState({listStudents:newStudents});
 
-    }
+    };
+    deleteStudent = (index) =>{
+
+        let newStudents = [...this.state.listStudents];
+        newStudents.splice(index, 1);
+        this.setState({listStudents:newStudents});
+
+    };
+    addStudent = (student)=>{
+        let newStudents = [...this.state.listStudents];
+        newStudents.push(student);
+        this.setState({listStudents:newStudents});
+    };
   render() {
     return (
-        <div>
-            <StudentsList editStudent={this.editStudent} students={this.state.listStudents}/>
-            <EditStudentDetails handleChangedStudent={this.handleChangedStudent} student={this.state.studentToEdit} index={this.state.editIndex}/>
-        </div>
+        <Router>
+            <div>
+            <Link to="/">Home</Link>
+            <Link to="/newStudent">Add Student</Link>
+
+                {/*<EditStudentDetails handleChangedStudent={this.handleChangedStudent} student={this.state.studentToEdit} index={this.state.editIndex}/>*/}
+            <Route exact path="/" render={()=><StudentsList deleteStudent={this.deleteStudent} editStudent={this.editStudent} students={this.state.listStudents}/>} />
+            <Route path="/newStudent" render={()=><AddNewStudent addStudent={this.addStudent}/>} />
+            </div>
+        </Router>
     );
   }
 }
