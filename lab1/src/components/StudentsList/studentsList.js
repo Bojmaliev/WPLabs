@@ -1,14 +1,15 @@
 import React from 'react';
 import StudentItem from "../StudentItem/studentItem";
+import {Link} from "react-router-dom";
 
 const studentsList = (props) => {
-    /*const editStudentHandler = (event) =>{
-        props.editStudent(props.index);
-    };*/
     const students = props.students.map((student,i)=> <StudentItem onClick={()=> props.editStudent(i)} deleteMe={()=>props.deleteStudent(i)} editStudent={props.editStudent} key={i}  student={student} />);
 
     return (
+        <div>
+            <Link to="/newStudent">Add Student</Link>
         <table>
+
             <thead>
             <tr>
                 <th>Ime</th>
@@ -19,6 +20,7 @@ const studentsList = (props) => {
                 {students}
             </tbody>
         </table>
+        </div>
     );
 }
 

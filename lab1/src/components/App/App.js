@@ -46,12 +46,9 @@ class App extends Component {
     return (
         <Router>
             <div>
-            <Link to="/">Home</Link>
-            <Link to="/newStudent">Add Student</Link>
-
-                {/*<EditStudentDetails handleChangedStudent={this.handleChangedStudent} student={this.state.studentToEdit} index={this.state.editIndex}/>*/}
             <Route exact path="/" render={()=><StudentsList deleteStudent={this.deleteStudent} editStudent={this.editStudent} students={this.state.listStudents}/>} />
             <Route path="/newStudent" render={()=><AddNewStudent addStudent={this.addStudent}/>} />
+            <Route path="/editStudent" render={()=><EditStudentDetails handleChangedStudent={this.handleChangedStudent} student={this.state.studentToEdit} index={this.state.editIndex}/>} />
             </div>
         </Router>
     );

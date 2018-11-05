@@ -1,5 +1,5 @@
 import React from "react"
-import { Redirect } from 'react-router';
+import {Link, Redirect} from 'react-router-dom';
 const initialState ={
     redirectTo:null,
     student: {
@@ -35,13 +35,14 @@ class addNewStudent extends React.Component{
     render() {
         let redirect ="";
         if(this.state.redirectTo != null)
-            redirect =  <Redirect to={{ pathname: this.state.redirectTo }} />
-
+            redirect =  <Redirect to={{ pathname: this.state.redirectTo }} />;
 
             return (
+                <div><Link to="/">Back</Link>
+                    {redirect}
             <form onSubmit={this.handleSubmit} >
                 <table>
-                    {redirect}
+
                     <tbody>
                     <tr><td>Ime:</td><td><input type="text" name="firstName" value={this.state.student.firstName} onChange={this.handleChange}/></td></tr>
                     <tr><td>Prezime:</td><td><input type="text" name="lastName" value={this.state.student.lastName} onChange={this.handleChange}/></td></tr>
@@ -51,7 +52,7 @@ class addNewStudent extends React.Component{
                     </tbody>
                 </table>
             </form>
-
+                </div>
         );
     }
 

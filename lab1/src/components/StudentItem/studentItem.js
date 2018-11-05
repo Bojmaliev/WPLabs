@@ -1,11 +1,13 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const studentItem = (props) => {
     return (
         <tr>
-            <td  onClick={props.onClick}>{props.student.firstName}</td>
-            <td  onClick={props.onClick}>{props.student.lastName}</td>
+            <td>{props.student.firstName}</td>
+            <td>{props.student.lastName}</td>
             <td><button onClick={props.deleteMe}>Delete me</button></td>
+            <td><button onClick={props.onClick}><Link to="/editStudent">Edit</Link></button></td>
         </tr>
     );
 };
