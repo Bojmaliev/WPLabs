@@ -2,8 +2,10 @@ import React from 'react';
 import StudentItem from "../StudentItem/studentItem";
 
 const studentsList = (props) => {
-
-    const students = props.students.map((student,i)=> <StudentItem editStudent={props.editStudent} key={i} index={i} student={student} />);
+    /*const editStudentHandler = (event) =>{
+        props.editStudent(props.index);
+    };*/
+    const students = props.students.map((student,i)=> <StudentItem onClick={()=> props.editStudent(i)} editStudent={props.editStudent} key={i}  student={student} />);
 
     return (
         <table>

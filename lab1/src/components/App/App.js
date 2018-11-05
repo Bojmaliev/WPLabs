@@ -16,10 +16,10 @@ class App extends Component {
         };
     }
     editStudent = (index) =>{
-        this.setState({
-            studentToEdit:this.state.listStudents[index],
+        this.setState((prevState) =>({
+            studentToEdit:prevState.listStudents[index],
             editIndex:index
-        });
+        }));
 
     };
     handleChangedStudent = (event) =>{
