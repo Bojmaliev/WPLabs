@@ -3,6 +3,7 @@ package mk.trkalo.wp.studentsapi.web.rest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import mk.trkalo.wp.studentsapi.model.PostNewStudent;
 import mk.trkalo.wp.studentsapi.model.Student;
+import mk.trkalo.wp.studentsapi.model.StudentInList;
 import mk.trkalo.wp.studentsapi.model.exceptions.StudentNotFoundException;
 import mk.trkalo.wp.studentsapi.service.StudentService;
 import mk.trkalo.wp.studentsapi.service.StudyProgramService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/students", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -27,13 +29,21 @@ public class StudentResource {
     }
 
     @GetMapping
-    public List<Student> getStudents() {
-        return studentService.getAllStudents();
+    public List<StudentInList> getStudents() {
+        return studentService.getAllStudents()
+                .stream()
+                .map(a->{
+                    StudentInList s = new StudentInList();
+                    s.index = a.index;
+                    s.lastName = a.lastName;
+                    s.name = a.name;
+                    return s;
+                }).collect(Collectors.toList());
     }
 
 
     @GetMapping("/all")
-    public List<Student> getAllStudents() {
+    public List<StudentInList> getAllStudents() {
         return getStudents();
     }
     @GetMapping("/{index}")
@@ -55,6 +65,22 @@ public class StudentResource {
         s.lastName = student.lastName;
         studentService.addNew(s);
         response.setHeader("Location", "/students/" + student.index);
+    }
+    @DeleteMapping("/{index}")
+    public void delete(@PathVariable("index") int index) {
+        studentService.delete(index);
+
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PatchMapping("/{index}")
+    public Student updateStudent(@RequestBody PostNewStudent student, @PathVariable int index, HttpServletResponse res){
+        Student s = studentService.getStudentsByIndex(index);
+        if(student.studyProgramName != null)s.studyProgram = studyProgramService.findStudyProgramByName(student.studyProgramName);
+        if(student.name != null) s.name = student.name;
+        if(student.lastName != null) s.lastName = student.lastName;
+        res.setHeader("Location", "students/"+student.index);
+        return s;
     }
 
 

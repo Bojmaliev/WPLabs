@@ -29,4 +29,14 @@ public class StudyProgramServiceImpl implements StudyProgramService {
                 .findFirst()
                 .orElseThrow(StudyProgramNotFoundException::new);
     }
+
+    @Override
+    public StudyProgram addNew(StudyProgram studyProgram) {
+        return studyProgramRepository.save(studyProgram);
+    }
+
+    @Override
+    public StudyProgram delete(int index) {
+        return studyProgramRepository.deleteById(index);
+    }
 }

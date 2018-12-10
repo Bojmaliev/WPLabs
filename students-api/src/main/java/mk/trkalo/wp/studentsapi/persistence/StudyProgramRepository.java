@@ -9,7 +9,7 @@ import java.util.List;
 public interface StudyProgramRepository {
     List<StudyProgram> findAll();
     StudyProgram getStudyProgramById(int id);
-    StudyProgram save(StudyProgram student);
+    StudyProgram save(StudyProgram studyProgram);
     StudyProgram deleteById(int id);
 
 

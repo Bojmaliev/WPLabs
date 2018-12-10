@@ -1,6 +1,7 @@
 package mk.trkalo.wp.studentsapi.persistence.impl;
 
 import mk.trkalo.wp.studentsapi.model.StudyProgram;
+import mk.trkalo.wp.studentsapi.model.exceptions.StudyProgramNotFoundException;
 import mk.trkalo.wp.studentsapi.persistence.StudyProgramRepository;
 import org.springframework.stereotype.Repository;
 
@@ -41,12 +42,20 @@ public class StudyProgramRepositoryImpl implements StudyProgramRepository {
     }
 
     @Override
-    public StudyProgram save(StudyProgram student){
-        return null;
+    public StudyProgram save(StudyProgram studyProgram){
+        studyProgram.id = (long)studyPrograms.size();
+        studyPrograms.add(studyProgram);
+        return studyPrograms.get(studyPrograms.size() - 1);
+
+
     }
 
     @Override
     public StudyProgram deleteById(int id){
-        return null;
+        if (id >= studyPrograms.size() || id < 0) {
+            throw new StudyProgramNotFoundException();
+        }
+        return studyPrograms.remove(id);
+
     }
 }

@@ -36,8 +36,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public void delete(int index) {
+        repository.deleteById(index);
+    }
+
+    @Override
     public List<Student> getStudentsByStudyProgram(int index) {
         return repository.findAll().stream().filter(a-> a.studyProgram.id==index).collect(Collectors.toList());
     }
+
 
 }

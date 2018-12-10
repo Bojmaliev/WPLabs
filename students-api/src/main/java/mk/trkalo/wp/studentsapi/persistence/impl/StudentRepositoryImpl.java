@@ -54,26 +54,25 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
     public Student getStudentById(int id)   {
-        if(!indexExists(String.valueOf(id)))throw new StudentNotFoundException();
-        return students.stream().filter(a->a.index.equals(String.valueOf(id))).findFirst().get();
+        return students.stream().filter(a->a.index.equals(String.valueOf(id))).findFirst().orElseThrow(StudentNotFoundException::new);
 
     }
 
     @Override
     public Student save(Student student) {
-        if(indexExists(student.index))throw new StudentAlreadyExistsException();
+        long howMuch = students.stream().filter(a->a.index.equals(student.index)).count();
+        if(howMuch!=0)throw new StudentAlreadyExistsException();
         students.add(student);
         return student;
     }
 
     @Override
     public Student deleteById(int id) {
-        if(indexExists(String.valueOf(id)))throw new StudentNotFoundException();
-        Student s = students.stream().filter(a->a.index.equals(String.valueOf(id))).findFirst().get();
+        Student s = students
+                .stream()
+                .filter(a->a.index.equals(String.valueOf(id)))
+                .findFirst().orElseThrow(StudentNotFoundException::new);
         return students.remove(students.indexOf(s));
     }
 
-    boolean indexExists(String index){
-        return students.stream().anyMatch(a -> a.index.equals(index));
-    }
 }
