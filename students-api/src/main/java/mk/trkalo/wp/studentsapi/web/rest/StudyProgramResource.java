@@ -30,7 +30,7 @@ public class StudyProgramResource {
         StudyProgram task1 = studyProgramService.addNew(task);
     }
     @DeleteMapping("/{index}")
-    public void delete(@PathVariable("index") int index) {
+    public void delete(@PathVariable("index") Long index) {
         studyProgramService.delete(index);
 
     }

@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface StudentService {
     List<Student> getAllStudents();
-    Student getStudentsByIndex(int index);
+    Student getStudentsByIndex(String index);
     Student addNew(Student student);
-    void delete(int index);
-    List<Student> getStudentsByStudyProgram(int index);
+    void delete(String index);
+    List<Student> getStudentsByStudyProgram(Long index);
 }

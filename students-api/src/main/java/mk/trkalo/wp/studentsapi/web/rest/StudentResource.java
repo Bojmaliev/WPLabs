@@ -47,34 +47,34 @@ public class StudentResource {
         return getStudents();
     }
     @GetMapping("/{index}")
-    public Student getStudentByIndex(@PathVariable("index") int index) throws StudentNotFoundException {
+    public Student getStudentByIndex(@PathVariable("index") String index) {
         return studentService.getStudentsByIndex(index);
     }
     @GetMapping("/by_study_program/{index}")
-    public List<Student> getStudentsByStudyProgram(@PathVariable("index") int index){
+    public List<Student> getStudentsByStudyProgram(@PathVariable("index") Long index){
+
         return studentService.getStudentsByStudyProgram(index);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addNew(@RequestBody PostNewStudent student, HttpServletResponse response)  {
+    public Student addNew(@RequestBody PostNewStudent student)  {
         Student s = new Student();
         s.studyProgram = studyProgramService.findStudyProgramByName(student.studyProgramName);
         s.index=student.index;
         s.name = student.name;
         s.lastName = student.lastName;
-        studentService.addNew(s);
-        response.setHeader("Location", "/students/" + student.index);
+        return studentService.addNew(s);
     }
     @DeleteMapping("/{index}")
-    public void delete(@PathVariable("index") int index) {
+    public void delete(@PathVariable("index") String index) {
         studentService.delete(index);
 
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PatchMapping("/{index}")
-    public Student updateStudent(@RequestBody PostNewStudent student, @PathVariable int index, HttpServletResponse res){
+    public Student updateStudent(@RequestBody PostNewStudent student, @PathVariable String index, HttpServletResponse res){
         Student s = studentService.getStudentsByIndex(index);
         if(student.studyProgramName != null)s.studyProgram = studyProgramService.findStudyProgramByName(student.studyProgramName);
         if(student.name != null) s.name = student.name;

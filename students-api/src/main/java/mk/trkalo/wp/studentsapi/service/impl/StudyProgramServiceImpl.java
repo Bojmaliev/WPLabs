@@ -1,6 +1,7 @@
 package mk.trkalo.wp.studentsapi.service.impl;
 
 import mk.trkalo.wp.studentsapi.model.StudyProgram;
+import mk.trkalo.wp.studentsapi.model.exceptions.StudyProgramAlreadyExists;
 import mk.trkalo.wp.studentsapi.model.exceptions.StudyProgramNotFoundException;
 import mk.trkalo.wp.studentsapi.persistence.StudyProgramRepository;
 import mk.trkalo.wp.studentsapi.service.StudyProgramService;
@@ -32,11 +33,14 @@ public class StudyProgramServiceImpl implements StudyProgramService {
 
     @Override
     public StudyProgram addNew(StudyProgram studyProgram) {
-        return studyProgramRepository.save(studyProgram);
+        boolean exists = studyProgramRepository.findAll().stream().anyMatch(a->a.name.equals(studyProgram.name));
+        if(exists) throw new StudyProgramAlreadyExists();
+
+        return studyProgramRepository.saveAndFlush(studyProgram);
     }
 
     @Override
-    public StudyProgram delete(int index) {
-        return studyProgramRepository.deleteById(index);
+    public void delete(Long index) {
+        studyProgramRepository.deleteById(index);
     }
 }
