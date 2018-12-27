@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/students", produces = MediaType.APPLICATION_JSON_VALUE)
 public class StudentResource {
     private final StudentService studentService;
@@ -60,7 +61,7 @@ public class StudentResource {
     @ResponseStatus(HttpStatus.CREATED)
     public Student addNew(@RequestBody PostNewStudent student)  {
         Student s = new Student();
-        s.studyProgram = studyProgramService.findStudyProgramByName(student.studyProgramName);
+        s.studyProgram = studyProgramService.findById(student.studyProgramId);
         s.index=student.index;
         s.name = student.name;
         s.lastName = student.lastName;
@@ -76,10 +77,12 @@ public class StudentResource {
     @PatchMapping("/{index}")
     public Student updateStudent(@RequestBody PostNewStudent student, @PathVariable String index, HttpServletResponse res){
         Student s = studentService.getStudentsByIndex(index);
-        if(student.studyProgramName != null)s.studyProgram = studyProgramService.findStudyProgramByName(student.studyProgramName);
+        if(student.studyProgramId != null)s.studyProgram = studyProgramService.findById(student.studyProgramId);
         if(student.name != null) s.name = student.name;
         if(student.lastName != null) s.lastName = student.lastName;
+        studentService.updateStudent(s);
         res.setHeader("Location", "students/"+student.index);
+
         return s;
     }
 

@@ -1,27 +1,31 @@
 import React from 'react';
 import StudentItem from "../StudentItem/studentItem";
 import {Link} from "react-router-dom";
+import Table from "react-bootstrap/es/Table";
+import Button from "react-bootstrap/es/Button";
+import Grid from "react-bootstrap/es/Grid";
 
 const studentsList = (props) => {
-    const students = props.students.map((student,i)=> <StudentItem onClick={()=> props.editStudent(i)} deleteMe={()=>props.deleteStudent(i)} editStudent={props.editStudent} key={i}  student={student} />);
+    const students = props.students.map((student,i)=> <StudentItem finish={props.finish} key={i}  student={student} />);
 
     return (
-        <div>
-            <Link to="/newStudent">Add Student</Link>
-        <table>
+        <Grid>
+            <Link to="/newStudent"><Button bsStyle="info">Create new student</Button></Link>
+        <Table responsive striped bordered condensed>
 
             <thead>
             <tr>
-                <th>Ime</th>
-                <th>Prezime</th>
+                <th>Name: </th>
+                <th>Last name: </th>
+                <th>Actions: </th>
             </tr>
             </thead>
             <tbody>
                 {students}
             </tbody>
-        </table>
-        </div>
+        </Table>
+        </Grid>
     );
-}
+};
 
 export default studentsList;

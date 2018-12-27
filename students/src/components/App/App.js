@@ -1,54 +1,57 @@
 import React, { Component } from 'react';
 import './App.css';
 import StudentsList from "../StudentsList/studentsList"
+import StudyProgramsList from "../StudyProgramsList/studyProgramsList"
 import EditStudentDetails from "../EditStudentDetails/editStudentDetails"
+import EditStudyProgram from "../EditStudyProgram/editStudyProgram"
 import {listStudents} from "../../repository/studentRepository"
 import AddNewStudent from "../AddNewStudent/addNewStudent"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CreateNewStudyProgram from "../CreateNewStudyProgram/createNewStudyProgram"
+import ViewStudentDetails from "../ViewStudentDetails/viewStudentDetails"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import {listStudyPrograms} from "../../repository/studyProgramRepository";
 
 class App extends Component {
     constructor(props){
         super(props);
 
         this.state = {
-            listStudents:listStudents(),
-            studentToEdit:null,
-            editIndex:-1
+            listStudents:[],
+            listStudyPrograms:[]
         };
     }
-    editStudent = (index) =>{
-        this.setState((prevState) =>({
-            studentToEdit:prevState.listStudents[index],
-            editIndex:index
-        }));
-
+    componentDidMount(){
+        this.loadStudents();
+        this.loadStudyProgramsHere();
+    }
+    loadStudents = () =>{
+        listStudents().then(function (res) {
+            return res.json();
+        }).then((res) =>{
+            this.setState({
+                listStudents:res
+            });
+        });
     };
-    handleChangedStudent = (event) =>{
-        this.setState({studentToEdit:null,editIndex:-1});
-        let newStudents = [...this.state.listStudents];
-        newStudents[event.index] = event.student;
-        this.setState({listStudents:newStudents});
-
-    };
-    deleteStudent = (index) =>{
-
-        let newStudents = [...this.state.listStudents];
-        newStudents.splice(index, 1);
-        this.setState({listStudents:newStudents});
-
-    };
-    addStudent = (student)=>{
-        let newStudents = [...this.state.listStudents];
-        newStudents.push(student);
-        this.setState({listStudents:newStudents});
+    loadStudyProgramsHere =() =>{
+        listStudyPrograms()
+            .then(function(res){return res.json()})
+            .then((res) => this.setState({listStudyPrograms:res}));
     };
   render() {
     return (
         <Router>
             <div>
-            <Route exact path="/" render={()=><StudentsList deleteStudent={this.deleteStudent} editStudent={this.editStudent} students={this.state.listStudents}/>} />
-            <Route path="/newStudent" render={()=><AddNewStudent addStudent={this.addStudent}/>} />
-            <Route path="/editStudent" render={()=><EditStudentDetails handleChangedStudent={this.handleChangedStudent} student={this.state.studentToEdit} index={this.state.editIndex}/>} />
+            <Route exact path="/" render={()=>
+                <><StudentsList finish={this.loadStudents} students={this.state.listStudents}/>
+                <StudyProgramsList finish={this.loadStudyProgramsHere} studyPrograms={this.state.listStudyPrograms}/></>
+            } />
+            <Route path="/newStudent" render={(props)=><AddNewStudent {...props} studyPrograms={this.state.listStudyPrograms} finish={this.loadStudents}/>} />
+                <Route path="/newStudyProgram" render={(props)=><CreateNewStudyProgram {...props} finish={this.loadStudyProgramsHere}/>} />
+
+            <Route path="/editStudent/:index" render={(props)=><EditStudentDetails finish={this.loadStudents} {...props} studyPrograms={this.state.listStudyPrograms}/>} />
+                <Route path="/editStudyProgram/:index" render={(props)=><EditStudyProgram finish={this.loadStudyProgramsHere} {...props}/>} />
+            <Route path="/viewStudentDetails/:index" render={(props)=><ViewStudentDetails finish={this.loadStudents} {...props}/>} />
             </div>
         </Router>
     );

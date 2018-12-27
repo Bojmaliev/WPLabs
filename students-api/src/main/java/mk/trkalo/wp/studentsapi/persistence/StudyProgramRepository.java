@@ -9,5 +9,6 @@ import java.util.List;
 
 public interface StudyProgramRepository extends JpaRepository<StudyProgram, Long> {
 
+   List<StudyProgram> findAllByName(String name);
 
 }

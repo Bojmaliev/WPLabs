@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5780e7da-4f58-4a28-a7c2-ebddf32332df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/model/exceptions/FormValidationFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CreateNewStudyProgram/createNewStudyProgram.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditStudyProgram/editStudyProgram.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StudyProgramItem/studyProgramItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StudyProgramsList/studyProgramsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ViewStudentDetails/viewStudentDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/studyProgramRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/model/PostNewStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/model/PostNewStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/persistence/StudyProgramRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/persistence/StudyProgramRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/StudyProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/StudyProgramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/impl/StudyProgramServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/service/impl/StudyProgramServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/web/rest/StudentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/web/rest/StudentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/web/rest/StudyProgramResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/java/mk/trkalo/wp/studentsapi/web/rest/StudyProgramResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../students-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../students-api/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddNewStudent/addNewStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddNewStudent/addNewStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StudentItem/studentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StudentItem/studentItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StudentsList/studentsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StudentsList/studentsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/studentRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/studentRepository.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,38 +105,45 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1308987033">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="8" />
+          <entry key="json" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="6402" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="6402" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/AddNewStudent/addNewStudent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="442">
+              <caret line="51" column="75" lean-forward="true" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -121,12 +152,60 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/repository/studentRepository.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="17" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/repository/studyProgramRepository.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/StudentsList/studentsList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/EditStudyProgram/editStudyProgram.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/CreateNewStudyProgram/createNewStudyProgram.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="55" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/AddNewStudent/addNewStudent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +214,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/StudentItem/studentItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="70" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="70" />
+            <state relative-caret-position="306">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="113" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/StudyProgramItem/studyProgramItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -153,6 +256,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>studentToEdit</find>
+      <find>editIndex</find>
+      <find>error</find>
+      <find>finish</find>
+      <find>listStudyPrograms</find>
+      <find>listS</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -161,11 +274,19 @@
       <list>
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/StudentsList/StudentsList.js" />
-        <option value="$PROJECT_DIR$/src/repository/studentRepository.js" />
         <option value="$PROJECT_DIR$/src/components/StudentItem/studentItem.js" />
-        <option value="$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js" />
-        <option value="$PROJECT_DIR$/src/components/App/App.js" />
         <option value="$PROJECT_DIR$/src/components/StudentsList/studentsList.js" />
+        <option value="$PROJECT_DIR$/src/components/ViewStudentDetails/viewStudentDetails.js" />
+        <option value="$PROJECT_DIR$/src/repository/studentRepository.js" />
+        <option value="$PROJECT_DIR$/src/components/studyProgramItem/studyProgramItem.js" />
+        <option value="$PROJECT_DIR$/src/components/StudyProgramsList/studyProgramsList.js" />
+        <option value="$PROJECT_DIR$/src/components/CreateNewStudyProgram/createNewStudyProgram.js" />
+        <option value="$PROJECT_DIR$/src/components/StudyProgramItem/studyProgramItem.js" />
+        <option value="$PROJECT_DIR$/src/components/App/EditStudyProgram/editStudyProgram.js" />
+        <option value="$PROJECT_DIR$/src/repository/studyProgramRepository.js" />
+        <option value="$PROJECT_DIR$/src/components/EditStudyProgram/editStudyProgram.js" />
+        <option value="$PROJECT_DIR$/src/components/App/App.js" />
+        <option value="$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js" />
         <option value="$PROJECT_DIR$/src/components/AddNewStudent/addNewStudent.js" />
       </list>
     </option>
@@ -185,10 +306,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -196,86 +316,128 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="AddNewStudent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="CreateNewStudyProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="EditStudentDetails" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="EditStudyProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="StudentItem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="StudentsList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="StudyProgramItem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="StudyProgramsList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewStudentDetails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="students" type="b2602c69:ProjectViewProjectNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541461439790" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545913862150" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../students-api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="D:\GitHub\WPLabs\lab1\node_modules\eslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\WPLabs\students\src\components\App\EditStudyProgram" />
+      <recent name="D:\GitHub\WPLabs\students\src\components\CreateNewStudyProgram" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\WPLabs\students\src\components" />
       <recent name="D:\GitHub\WPLabs\lab1\src\components\App" />
     </key>
   </component>
@@ -304,24 +466,27 @@
       <workItem from="1541365350409" duration="16345000" />
       <workItem from="1541418420521" duration="4484000" />
       <workItem from="1541605912635" duration="70000" />
+      <workItem from="1545606066783" duration="8568000" />
+      <workItem from="1545836185680" duration="16782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24093000" />
+    <option name="totallyTimeSpent" value="49443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26308724" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
@@ -368,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/repository/studentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -384,35 +542,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js">
+    <entry file="file://$PROJECT_DIR$/src/components/ViewStudentDetails/viewStudentDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="510">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/App.js">
+    <entry file="file://$PROJECT_DIR$/src/components/StudyProgramsList/studyProgramsList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="8" column="78" lean-forward="true" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/StudentsList/studentsList.js">
+    <entry file="file://$PROJECT_DIR$/src/components/StudyProgramItem/studyProgramItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        <state relative-caret-position="306">
+          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -421,18 +579,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/StudentItem/studentItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="70" />
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="113" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CreateNewStudyProgram/createNewStudyProgram.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/repository/studentRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/repository/studyProgramRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditStudyProgram/editStudyProgram.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/StudentsList/studentsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="51" column="75" lean-forward="true" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EditStudentDetails/editStudentDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AddNewStudent/addNewStudent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

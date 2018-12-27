@@ -8,6 +8,7 @@ public interface StudentService {
     List<Student> getAllStudents();
     Student getStudentsByIndex(String index);
     Student addNew(Student student);
+    Student updateStudent(Student student);
     void delete(String index);
     List<Student> getStudentsByStudyProgram(Long index);
 }

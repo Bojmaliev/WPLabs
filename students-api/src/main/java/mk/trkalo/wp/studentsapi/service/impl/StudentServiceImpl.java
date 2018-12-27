@@ -1,15 +1,13 @@
 package mk.trkalo.wp.studentsapi.service.impl;
 
 import mk.trkalo.wp.studentsapi.model.Student;
-import mk.trkalo.wp.studentsapi.model.exceptions.InvalidStudentIndexException;
-import mk.trkalo.wp.studentsapi.model.exceptions.StudentAlreadyExistsException;
-import mk.trkalo.wp.studentsapi.model.exceptions.StudentNotFoundException;
-import mk.trkalo.wp.studentsapi.model.exceptions.StudyProgramNotFoundException;
+import mk.trkalo.wp.studentsapi.model.exceptions.*;
 import mk.trkalo.wp.studentsapi.persistence.StudentRepository;
 import mk.trkalo.wp.studentsapi.persistence.StudyProgramRepository;
 import mk.trkalo.wp.studentsapi.service.StudentService;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Service
@@ -34,10 +32,25 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student addNew(Student student)  {
+        if(student.lastName == null || student.index == null || student.name == null) throw new FormValidationFailedException();
         if(!student.index.matches("^[0-9]{6}$")) throw new InvalidStudentIndexException();
         if(repository.existsById(student.index))throw new StudentAlreadyExistsException();
+
         return repository.saveAndFlush(student);
     }
+
+    @Override
+    public Student updateStudent(Student student) {
+        if(!student.index.matches("^[0-9]{6}$")) throw new InvalidStudentIndexException();
+        Student s = repository.getOne(student.index);
+        s.index = student.index;
+        s.name = student.name;
+        s.lastName = student.lastName;
+        s.studyProgram = student.studyProgram;
+        repository.flush();
+        return student;
+    }
+
 
     @Override
     public void delete(String index) {

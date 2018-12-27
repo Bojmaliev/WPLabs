@@ -1,6 +1,7 @@
 package mk.trkalo.wp.studentsapi.service.impl;
 
 import mk.trkalo.wp.studentsapi.model.StudyProgram;
+import mk.trkalo.wp.studentsapi.model.exceptions.FormValidationFailedException;
 import mk.trkalo.wp.studentsapi.model.exceptions.StudyProgramAlreadyExists;
 import mk.trkalo.wp.studentsapi.model.exceptions.StudyProgramNotFoundException;
 import mk.trkalo.wp.studentsapi.persistence.StudyProgramRepository;
@@ -23,24 +24,35 @@ public class StudyProgramServiceImpl implements StudyProgramService {
     }
 
     @Override
-    public StudyProgram findStudyProgramByName(String name) {
-        return studyProgramRepository.findAll()
-                .stream()
-                .filter(studyProgram -> studyProgram.name.equals(name))
-                .findFirst()
-                .orElseThrow(StudyProgramNotFoundException::new);
+    public StudyProgram findById(Long id) {
+        if(id == null) throw new StudyProgramNotFoundException();
+        return studyProgramRepository.findById(id).orElseThrow(StudyProgramNotFoundException::new);
     }
 
     @Override
     public StudyProgram addNew(StudyProgram studyProgram) {
-        boolean exists = studyProgramRepository.findAll().stream().anyMatch(a->a.name.equals(studyProgram.name));
-        if(exists) throw new StudyProgramAlreadyExists();
+        int size  = studyProgramRepository.findAllByName(studyProgram.name).size();
+
+        if(size != 0) throw new StudyProgramAlreadyExists();
 
         return studyProgramRepository.saveAndFlush(studyProgram);
     }
 
     @Override
     public void delete(Long index) {
+        if(index== null)throw new FormValidationFailedException();
+        StudyProgram sp = studyProgramRepository.findById(index).orElseThrow(StudyProgramNotFoundException::new);
+        if(sp.students.size() != 0)throw new FormValidationFailedException();
+
         studyProgramRepository.deleteById(index);
+    }
+
+    @Override
+    public StudyProgram updateStudyProgram(StudyProgram s) {
+        StudyProgram da = studyProgramRepository.findById(s.id).get();
+        if(s.name == null) throw new FormValidationFailedException();
+        da.name = s.name;
+
+        return studyProgramRepository.saveAndFlush(da);
     }
 }

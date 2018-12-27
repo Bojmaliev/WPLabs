@@ -4,5 +4,5 @@ public class PostNewStudent {
     public String index;
     public String name;
     public String lastName;
-    public String studyProgramName;
+    public Long studyProgramId;
 }
